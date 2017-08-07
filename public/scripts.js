@@ -137,8 +137,9 @@ function drop(ev,type) {
     var peer_username = ev.dataTransfer.getData("text"); // drag and drop transfers username
     var invite = {}; 
 
-    invite['type'] = type; // type = 'new' or 'current' (chat with this user only, or add user to current chat) 
+    invite['type'] = 'new'; // type = 'new' or 'current' (chat with this user only, or add user to current chat) 
     invite['to'] = peer_username;
+    //invite['to'] = '123';
     invite['from'] = my_username; 
 
     socket.emit('invite', invite); // send invite to chat

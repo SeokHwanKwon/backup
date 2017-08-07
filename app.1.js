@@ -120,7 +120,7 @@ app.get('/login',function(req, res) {
     Wfrom = req.query.from;
     Wto = req.query.to;
     res.send(Wfrom +','+ Wto);
-    //res.status(200).sendFile(__dirname + '/index.html');
+    
 });
 app.get('*', function(req, res){          
     
